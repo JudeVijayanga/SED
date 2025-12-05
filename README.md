@@ -20,13 +20,13 @@ A Python tool to generate **spectral energy distributions (SEDs)** from galaxy p
 
 ## 🧱 Project Structure
 ```
-genSED/
+sed/
 │
 ├── README.md # Main program: generates SEDs
 ├── LICENSE # Reads and processes photometric input
-├── sed/ # Utility functions and helpers
+├── gsed/ # Utility functions and helpers
 │ ├── conversion.py
-│ └── sed.py
+│ └── spectrum.py
   └── suppliments\
   
 ├── tests/ # Unit tests (optional)
@@ -75,7 +75,32 @@ The **UV luminosity** is derived from the SED at the rest-frame wavelength of **
 Clone the repository and install locally:
 
 ```bash
-git clone https://github.com/<your-username>/genSED.git
-cd genSED
-python3 -m pip install --no-build-isolation -v .
+git clone https://github.com/JudeVijayanga/sed.git
+cd sed
+pip install .
 ```
+
+## 🚀 How to use.
+
+1. Quick Test Run
+
+In your terminal, 
+- $cd gsed
+- $python spectrum.py
+
+Results appear in:  output folder
+
+
+___________________________________________________
+
+2. Using Your Own Galaxy SED
+   To compute synthetic SIMBA photometry:
+
+- First, Update the input SED - replace gsed/suppliments/sed_flux1_1.txt with your own wavelength (µm) and flux (mJy) data.
+- Second, Set the galaxy redshift - Find the redshift in: gsed/suppliments/output.txt and update spectrum.py:
+- Third, Run the program $python spectrum.py.
+- Retrieve results: Outputs go to: output/
+
+3. Testing
+- Find testing folder: cd test/
+- Run the program $pytest test_conversion.py
