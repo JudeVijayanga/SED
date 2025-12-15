@@ -20,5 +20,4 @@ class TestConversion:
         # Use the calculated value:
         expected_mJy = 0.0022910061178075852
         
-  
         assert result == pytest.approx(expected_mJy, rel=1e-6)
