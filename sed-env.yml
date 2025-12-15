@@ -17,4 +17,4 @@ dependencies:
   - toml
   - pip
   - setuptools
-  - wheel
+  - wheelgit
