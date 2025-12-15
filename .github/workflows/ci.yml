@@ -33,12 +33,7 @@ jobs:
 
       - name: Install package (prefer wheel)
         shell: bash
-        run: |
-          if compgen -G "dist/*.whl" > /dev/null; then
-            python -m pip install dist/*.whl
-          else
-            python -m pip install -e .
-          fi
+        run: python -m pip install -e .
 
       - name: Run tests
         run: python -m pytest -q tests
