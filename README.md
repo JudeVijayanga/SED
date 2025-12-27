@@ -10,7 +10,7 @@ A Python tool to generate **spectral energy distributions (SEDs)** from galaxy p
 
 ## 📖 Overview
 
-`genSED` reads galaxy photometry (in **mJy**) and produces:
+`gSEd` reads galaxy photometry (in **mJy**) and produces:
 
 - **Total far-infrared (FIR) luminosity** in solar units (L☉), by integrating over the rest-frame range of 8–1000 μm.  
 - **Dust temperature** (K) using the modified greybody + power-law SED formulation from *Casey (2012)*.  
